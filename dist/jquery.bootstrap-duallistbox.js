@@ -27,7 +27,7 @@
       nonSelectedFilter: '',                                                              // string, filter the non selected options
       selectedFilter: '',                                                                 // string, filter the selected options
       infoText: 'Showing all {0}',                                                        // text when all options are visible / false for no info text
-      infoTextFiltered: '<span class="label label-warning">Filtered</span> {0} from {1}', // when not all of the options are visible due to the filter
+      infoTextFiltered: '<span class="">Filtered</span> {0} from {1}', // when not all of the options are visible due to the filter
       infoTextEmpty: 'Empty list',                                                        // when there are no options present in the list
       filterOnValues: false                                                               // filter by selector's values, boolean
     },
@@ -427,7 +427,7 @@
       this.settings.bootstrap2Compatible = value;
       if (value) {
         this.container.removeClass('row').addClass('row-fluid bs2compatible');
-        this.container.find('.box1, .box2').removeClass('col-md-6').addClass('span6');
+        this.container.find('.box1, .box2').removeClass('col col-6').addClass('span6');
         this.container.find('.clear1, .clear2').removeClass('btn-default btn-xs').addClass('btn-mini');
         this.container.find('input, select').removeClass('form-control');
         this.container.find('.btn').removeClass('btn-default');
@@ -435,7 +435,7 @@
         this.container.find('.removeall > i, .remove > i').removeClass('glyphicon glyphicon-arrow-left').addClass('icon-arrow-left');
       } else {
         this.container.removeClass('row-fluid bs2compatible').addClass('row');
-        this.container.find('.box1, .box2').removeClass('span6').addClass('col-md-6');
+        this.container.find('.box1, .box2').removeClass('span6').addClass('col col-6');
         this.container.find('.clear1, .clear2').removeClass('btn-mini').addClass('btn-default btn-xs');
         this.container.find('input, select').addClass('form-control');
         this.container.find('.btn').addClass('btn-default');
